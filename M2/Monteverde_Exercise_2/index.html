@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercise 2</title>
+</head>
+<body>
+    <h1 id="txtName"></h1>
+    <h1 id="txtAge"></h1>
+    <h1 id="txtHobbies"></h1>
+    
+    <script>
+        const person = {
+            name: "Izzy Monteverde",
+            age: 19,
+            hobbies: ["gaming", "eating", "sleeping"]
+        };
+        
+        document.getElementById("txtName").textContent = person.name;
+        document.getElementById("txtAge").textContent = person.age;
+        document.getElementById("txtHobbies").textContent = person.hobbies.join(", ");
+        
+        const jsonString = JSON.stringify(person);
+        console.log(jsonString);
+    </script>
+</body>
+</html>

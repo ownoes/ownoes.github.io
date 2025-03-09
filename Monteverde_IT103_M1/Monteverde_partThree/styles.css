@@ -1,0 +1,246 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styles */
+body, html {
+    font-family: Arial, sans-serif;
+    background-image: url('background.jpg'); /* Placeholder for Background Image */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: #fff;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Header */
+#header {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+   
+    overflow: hidden; /* Prevents overflow */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0; /* Remove any padding */
+    border: none; /* Ensure no border is applied */
+}
+
+#header-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fully fits the header */
+    display: block;
+    border: none; /* Remove any potential border */
+}
+
+/* Layout */
+.container {
+    display: flex;
+    height: calc(100vh - 200px); /* Adjusting for header height */
+    overflow: hidden;
+}
+
+/* Sidebar Navigation */
+.sidebar {
+    width: 250px;
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 2px solid #141414;
+}
+
+.sidebar h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 22px;
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+    text-align: center;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    display: block;
+    transition: background 0.3s, color 0.3s;
+    border-radius: 5px;
+}
+
+.sidebar ul li a:hover {
+    background-color: #ffcc00;
+    color: black;
+}
+
+/* Main Content Area */
+.content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Slides */
+.slide {
+    display: none;
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+#home-slide {
+    display: block; /* Default slide visible */
+}
+
+/* Home Slide */
+.home-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.slide h1, .slide h2 {
+    margin: 10px 0;
+}
+
+/* About Me Slide */
+.about-content, .about-image {
+    width: 48%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px;
+}
+
+.about-content {
+    text-align: left;
+}
+
+.about-image img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Video Carousel */
+.video-carousel {
+    position: relative;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.video-slide {
+    display: none;
+    text-align: center;
+}
+
+.video-slide.active {
+    display: block;
+}
+
+.video-slide video {
+    width: 100%;
+    max-height: 400px;
+    border-radius: 10px;
+}
+
+#prev-btn, #next-btn {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+    border-radius: 5px;
+}
+
+#prev-btn:hover, #next-btn:hover {
+    background-color: #666;
+}
+
+/* WIP Section */
+.wip-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.wip-item img {
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.wip-item div {
+    text-align: left;
+    flex: 1;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+        border-right: none;
+        border-bottom: 2px solid #444;
+    }
+
+    .sidebar ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .about-content, .about-image {
+        width: 100%;
+    }
+
+    .wip-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .wip-item img {
+        margin-bottom: 15px;
+    }
+}

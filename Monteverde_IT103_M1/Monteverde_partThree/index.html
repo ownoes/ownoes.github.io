@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Izzy Mari's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header id="header">
+        <img src="header-image.jpg" alt="Header Image" id="header-image"> <!-- Placeholder for Header Picture -->
+    </header>
+
+    <main class="container">
+        <!-- Navigation Bar -->
+        
+        <nav class="sidebar">
+            <h1 class="centered">Get to know me!</h1>
+            <ul>
+                <li><a href="#" id="nav-home">Home</a></li>
+                <li><a href="#" id="nav-about">About Me</a></li>
+                <li><a href="#" id="nav-projects">Recent Projects</a></li>
+                <li><a href="#" id="nav-wip">WIP's</a></li>
+            </ul>
+        </nav>
+
+        <!-- Content Area -->
+        <section class="content" id="content-area">
+            <!-- First Slide (Home) -->
+            <div class="slide" id="home-slide">
+                <img src="home-image.jpg" alt="Home Picture" class="home-image"> <!-- Placeholder Image -->
+                <h1>Welcome to my portfolio!</h1>
+                <h2>I am Izzy Mari C. Monteverde, a second-year student in MMCM!</h2>
+            </div>
+
+            <!-- Second Slide (About Me) -->
+            <div class="slide" id="about-slide" style="display: none;">
+                <div class="about-content">
+                    <h1>About Me!</h1>
+                    <p>Insert text here about yourself.</p>
+                </div>
+                <div class="about-image">
+                    <img src="about-image.jpg" alt="About Me Picture"> <!-- Placeholder Image -->
+                </div>
+            </div>
+
+            <!-- Third Slide (Recent Projects) -->
+            <div class="slide" id="projects-slide" style="display: none;">
+                <h1>Recent Projects</h1>
+                <div class="video-carousel">
+                    <div class="video-slide active">
+                        <video src="video1.mp4" controls></video>
+                        <p>Description for Video 1</p>
+                    </div>
+                    <div class="video-slide">
+                        <video src="video2.mp4" controls></video>
+                        <p>Description for Video 2</p>
+                    </div>
+                    <div class="video-slide">
+                        <video src="video3.mp4" controls></video>
+                        <p>Description for Video 3</p>
+                    </div>
+                    <button id="prev-btn">Previous</button>
+                    <button id="next-btn">Next</button>
+                </div>
+            </div>
+
+            <!-- Fourth Slide (WIP's) -->
+            <div class="slide" id="wip-slide" style="display: none;">
+                <div class="wip-item">
+                    <img src="wip-image1.jpg" alt="WIP Picture 1"> <!-- Placeholder Image -->
+                    <div>
+                        <h2>Title 1</h2>
+                        <p>Insert text describing this WIP.</p>
+                    </div>
+                </div>
+                <div class="wip-item">
+                    <img src="wip-image2.jpg" alt="WIP Picture 2"> <!-- Placeholder Image -->
+                    <div>
+                        <h2>Title 2</h2>
+                        <p>Insert text describing this WIP.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
